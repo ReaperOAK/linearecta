@@ -1,0 +1,96 @@
+/* Styling the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Styling the table headers */
+th {
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Styling the table rows */
+tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Styling the table data */
+td, th {
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Removing the border from the last row */
+tr:last-child {
+    border-bottom: none;
+}
+
+#search_term {
+border: 1px solid #FFFF00; /* Establece el color del borde */
+outline: none; /* Elimina el contorno que se muestra al enfocar el input */
+background-color: transparent; /* Hace el fondo transparente */
+padding: 8px; /* Añade algo de relleno dentro del input */
+margin: 5px 0; /* Añade un margen si es necesario */
+width: calc(100% - 20px); /* Ajusta el ancho, restando el padding para mantener el input dentro de su contenedor */
+box-sizing: border-box; /* Asegura que el padding no aumente el tamaño del input */
+}
+
+#search_term::placeholder {
+color: #AAAAAA; /* Cambia el color del texto del placeholder si es necesario */
+}
+
+#search_term:focus {
+border-color: darken(#FFFF00, 10%); /* Oscurece el borde al enfocar, ajusta según necesites */
+}
+/* Styling for small screens */
+@media (max-width: 600px) {
+    /* Hide the table headers */
+    table th {
+        display: none;
+    }
+
+    /* Style for table rows on small screens */
+    table td {
+        display: block;
+        border: none;
+        padding: 8px 0;
+    }
+
+    /* Add some space between column name and value */
+    table td::before {
+        content: attr(data-label) ": ";
+        font-weight: bold;
+        display: inline-block;
+        width: 30%;
+    }
+}
+
+/* Container for the dropdowns */
+.dropdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Add space between the container and the table */
+}
+
+/* Style for each dropdown */
+.dropdown-container select {
+    flex: 1; /* Equal width for each dropdown */
+    margin-right: 10px; /* Add space between each dropdown */
+    margin-bottom: 10px; /* Add space between rows */
+}
+
+/* Media query for mobile view */
+@media (max-width: 600px) {
+    .dropdown-container select {
+        width: 100%; /* Full width for each dropdown on mobile */
+    }
+}
+img{
+    height: 1rem;
+    width: 1rem;
+}

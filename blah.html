@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="blah.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
+        <div grid-col="x12" grid-pad="2"><h1><a href="Overview-1" rel="history"><b>Blue Pages</b><br></a><br>
+    “Blue Pages” is the go-to directory for connecting with the most talented Latin American creatives, fashion designers, illustrators, writers, musicians, stylists, and more. <br><br>
+    Inspired by the classic Yellow Pages concept, "Blue Pages" is the contemporary index that brings together the region's creative minds under one cover.</h1>
+    <br><br><br> 
+        <div id="search_form" data-view="search">
+            <input type="text" id="search_term" placeholder="Search...">
+          </div>
+          <div class="dropdown-container">
+          <label for="activity">Activity:</label>
+<select id="activity" onchange="filterTableByColumn(2, this.value)">
+    <option value="">All</option>
+    <option value="Painter">Painter</option>
+    <option value="curator">curator</option>
+    <option value="photographer">photographer</option>
+</select>
+
+<label for="fields">Fields:</label>
+<select id="fields" onchange="filterTableByColumn(3, this.value)">
+    <option value="">All</option>
+    <option value="art">art</option>
+    <option value="music">music</option>
+    <option value="film">film</option>
+</select>
+
+<label for="based-in">Based In:</label>
+<select id="based-in" onchange="filterTableByColumn(4, this.value)">
+    <option value="">All</option>
+    <option value="paris">paris</option>
+    <option value="madrid">madrid</option>
+    <option value="berlin">berlin</option>
+</select>
+
+<label for="origin">Origin:</label>
+<select id="origin" onchange="filterTableByColumn(5, this.value)">
+    <option value="">All</option>
+    <option value="mexico">mexico</option>
+    <option value="peru">peru</option>
+    <option value="brazil">brazil</option>
+</select>
+</div>
+
+        <table id="myTable">
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    
+        </div></div>       
+    <div style=" text-align: left;"><br><br>
+    </div>
+    <script src="blah.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</body>
+</html>
