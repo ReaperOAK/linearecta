@@ -14,7 +14,6 @@ fetch(FULL_URL)
     let data = JSON.parse(jsonResponse);
 
     let tableData = data.table;
-    console.log('Table Data:', tableData);
 
     let table = document.getElementById('myTable');
     let thead = document.createElement('thead');
