@@ -90,7 +90,6 @@ border-color: darken(#FFFF00, 10%); /* Oscurece el borde al enfocar, ajusta seg√
         width: 100%; /* Full width for each dropdown on mobile */
     }
 }
-img{
-    height: 1rem;
-    width: 1rem;
+.globesvg{
+    font-size: 0.1rem;
 }

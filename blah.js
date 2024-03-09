@@ -1,7 +1,7 @@
-let SHEET_ID = '1mIzhh-lR43e1QOrlLNWTqemGwM3B_Q80XQ13QJEJ5ZE';
-// let SHEET_ID = '1qNc90Oh2qH8a5HLSkKAr9ZQgcjJnLQuUBZiIlIs8klE';
-let SHEET_TITLE = 'Bluepages';
-// let SHEET_TITLE = 'Sheet1';
+// let SHEET_ID = '1mIzhh-lR43e1QOrlLNWTqemGwM3B_Q80XQ13QJEJ5ZE';
+let SHEET_ID = '1qNc90Oh2qH8a5HLSkKAr9ZQgcjJnLQuUBZiIlIs8klE';
+// let SHEET_TITLE = 'Bluepages';
+let SHEET_TITLE = 'Sheet1';
 let SHEET_RANGE = 'A:G';
 
 let FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
@@ -42,8 +42,9 @@ for (let i = 1; i < tableData.rows.length; i++) {
       let td = document.createElement('td');
       let columnName = tableData.rows[0].c[j].v || '';
       if (j === 6) { // Add icon for the last column
-          let icon = document.createElement('img');
-          icon.src = 'https://www.svgrepo.com/show/522554/globe-2.svg';
+          let icon = document.createElement('span');
+          icon.className = 'material-symbols-outlined globesvg';
+          icon.textContent = 'language';
           icon.style.cursor = 'pointer';
           icon.addEventListener('click', function() {
               window.open(tableData.rows[i].c[j].v, '_blank');
@@ -55,7 +56,7 @@ for (let i = 1; i < tableData.rows.length; i++) {
           icon.textContent="@";
           icon.style.cursor = 'pointer';
           icon.addEventListener('click', function() {
-              window.open('https://www.instagram.com/' + tableData.rows[i].c[j].v, '_blank');
+              window.open('https://www.instagram.com/' + tableData.rows[i].c[j].v);
           });
           td.appendChild(icon);
       } else {
